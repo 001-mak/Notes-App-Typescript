@@ -2,6 +2,7 @@ import express from 'express';
 import client from "../database"
 import router from './routes/noteRouter';
 const app = express();
+app.use(express.json());
 
 app.use("/api", router);
 

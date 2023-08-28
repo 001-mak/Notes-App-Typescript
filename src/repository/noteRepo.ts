@@ -1,14 +1,41 @@
-import client from "../../database";
+// import client from "../../database";
 
-const getNotesRepo = (): unknown => {
-  const notes = client.query("select * from notes", (err, result) => {
-    if (!err) {
-      return result;
-    } else {
-      console.log(err);
-    }
-  });
-  return notes;
-};
+// export const getNotesRepo = async () => {
+//   const notes = await client.query("select * from notes", (err, result) => {
+//     if (!err) {
+//       return result;
+//     } else {
+//       console.log(err);
+//     }
+//   });
+//   return notes;
+// };
 
-export default { getNotesRepo };
+// export const getNoteRepo = async (id: number) => {
+//   const notes = await client.query(
+//     "select * from notes where id = $1 "[id],
+//     (err, result) => {
+//       if (!err) {
+//         return result;
+//       } else {
+//         console.log(err);
+//       }
+//     }
+//   );
+//   return notes;
+// };
+
+// export const createNoteRepo =  (title:string,  description:string ) => {
+  
+//   const note =  client.query(
+//     "INSERT INTO notes (title, description) VALUES ($1, $2) RETURNING *"[title, description],
+//     (err, result) => {
+//       if (!err) {
+//         return result;
+//       } else {
+//         console.log(err);
+//       }
+//     }
+//   );
+//   return note;
+// };
